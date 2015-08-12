@@ -93,7 +93,7 @@ ul a:visited {
 
 .slide { text-align: center;}
 
-.slide p, .slide ol, .slide ul {
+.slide p, .slide ol, .slide ul, .slide > pre {
   padding: 10px;
   margin: 0em 80px;
   background: rgba(70, 178, 157, 0.2); /*#46B29D;*/

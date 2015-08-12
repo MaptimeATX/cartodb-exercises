@@ -34,40 +34,140 @@
 <p>First, check out <a href="http://maptime.io/cartodb-tutorial/">maptime.io/cartodb-tutorial/</a></p>
 <p>Then, get a CartoDB account at <a href="https://cartodb.com/signup">cartodb.com/signup</a> for today's exercises</p>
 </div>
-<div id="exercise-1---simple-points" class="slide section level1">
-<h1>Exercise 1 - Simple Points</h1>
+<div id="tutorial---world-cities-map" class="slide section level1">
+<h1>Tutorial - World Cities Map</h1>
 <p><a href="http://www.naturalearthdata.com/">Natural Earth Data - naturalearthdata.com</a></p>
 <p>This is a great resource for general cartographic data, and it's public domain!</p>
 </div>
-<div id="exercise-1---simple-points-1" class="slide section level1">
-<h1>Exercise 1 - Simple Points</h1>
+<div id="tutorial---world-cities-map-1" class="slide section level1">
+<h1>Tutorial - World Cities Map</h1>
 <div class="incremental">
-<ol style="list-style-type: decimal">
-<li><p>Download <a href="http://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-populated-places/">Natural Earth Data Populated Places Simple</a> Shapefile: <a href="http://goo.gl/QtJiCn">goo.gl/QtJiCn</a></p></li>
-<li><p>Open <a href="http://cartodb.com">cartodb.com</a> and sign-in</p></li>
-<li><p>Drag the downloaded <code>.zip</code> file into your CartoDB Dashboard</p></li>
-<li><p>Explore the Data View, note the different columns</p></li>
-<li><p>Explore the Map View, experiment with the Wizards. Try making a <strong>Bubble Map</strong> based on population.</p></li>
-<li><p>Click Visualize, then click Publish. Now you have a shareable link!</p></li>
-</ol>
-</div>
-</div>
-<div class="slide section level1">
+<p>Download <a href="http://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-populated-places/">Natural Earth Data Populated Places Simple</a> Shapefile: <a href="http://goo.gl/QtJiCn">goo.gl/QtJiCn</a></p>
+<div class="figure">
+<img src="img/populated_places_dl.png" />
 
-<div class="big-image">
-<img src="img/world-cities-map.png" />
+</div>
+<p>Open <a href="http://cartodb.com">cartodb.com</a> and log in</p>
+<p>Drag the downloaded <code>ne_50m_populated_places_simple.zip</code> file into your CartoDB Dashboard</p>
 </div>
 </div>
-<div id="exercise-2---polygons" class="slide section level1">
-<h1>Exercise 2 - Polygons</h1>
+<div id="tutorial---world-cities-map-2" class="slide section level1">
+<h1>Tutorial - World Cities Map</h1>
+<div class="figure">
+<img src="img/populated_places_map1.png" alt="Whoa! A fully functional web map!" />
+<p class="caption">Whoa! A fully functional web map!</p>
+</div>
+</div>
+<div id="tutorial---world-cities-map-3" class="slide section level1">
+<h1>Tutorial - World Cities Map</h1>
 <div class="incremental">
+<p>Explore the <strong>Data View</strong>, note the different columns (especially <code>pop_max</code>)</p>
+<div class="figure">
+<img src="img/populated_places_data_view.png" />
+
+</div>
+</div>
+</div>
+<div id="tutorial---world-cities-map-4" class="slide section level1">
+<h1>Tutorial - World Cities Map</h1>
+<div class="incremental">
+<p>Explore the <strong>Map View</strong>, experiment with the Wizards.</p>
+<p>Try making a <strong>Bubble Map</strong> based on population.</p>
+<div class="figure">
+<img src="img/populated_places_bubble.png" />
+
+</div>
+</div>
+</div>
+<div id="tutorial---world-cities-map-5" class="slide section level1">
+<h1>Tutorial - World Cities Map</h1>
+<div class="incremental">
+<p>Add an <strong>Info Window</strong> to display <code>name</code> and <code>pop_max</code></p>
+<div class="figure">
+<img src="img/populated_places_infowindow.png" />
+
+</div>
+</div>
+</div>
+<div id="tutorial---world-cities-map-6" class="slide section level1">
+<h1>Tutorial - World Cities Map</h1>
+<div class="incremental">
+<p>Check out the <strong>CartoCSS Editor</strong> tab. That's the <code>code</code> for all the styling rules.</p>
+<p>Instead of using the Wizard, we could have done all the styling manually in this tab.</p>
+</div>
+</div>
+<div id="tutorial---world-cities-map-7" class="slide section level1">
+<h1>Tutorial - World Cities Map</h1>
+<div class="figure">
+<img src="img/populated_places_cartocss.png" />
+
+</div>
+</div>
+<div id="tutorial---world-cities-map-8" class="slide section level1">
+<h1>Tutorial - World Cities Map</h1>
+<p>Add the following rule to add labels to your city dots:</p>
+<pre><code>#ne_50m_populated_places_simple::labels {
+  text-name: [name];
+  text-face-name: &#39;DejaVu Sans Book&#39;;
+  text-size: 10;
+  text-label-position-tolerance: 10;
+  text-fill: #000;
+  text-halo-fill: #FFF;
+  text-halo-radius: 1;
+  text-dy: -8;
+  text-allow-overlap: true;
+  text-placement: point;
+  text-placement-type: simple;
+}</code></pre>
+</div>
+<div id="tutorial---world-cities-map-9" class="slide section level1">
+<h1>Tutorial - World Cities Map</h1>
+<div class="figure">
+<img src="img/populated_places_labelcss.png" />
+
+</div>
+</div>
+<div id="tutorial---world-cities-map-10" class="slide section level1">
+<h1>Tutorial - World Cities Map</h1>
+<div class="incremental">
+<p>Now that we have labels, let's change the basemap to one without its own labels</p>
+<div class="figure">
+<img src="img/populated_places_litebasemap.png" />
+
+</div>
+</div>
+</div>
+<div id="tutorial---world-cities-map-11" class="slide section level1">
+<h1>Tutorial - World Cities Map</h1>
+<div class="incremental">
+<p>Click Visualize, then Publish to get a shareable link to your map</p>
+<div class="figure">
+<img src="img/populated_places_final.png" />
+
+</div>
+</div>
+</div>
+<div id="exercise-1---population-choropleth" class="slide section level1">
+<h1>Exercise 1 - Population Choropleth</h1>
+<div class="incremental">
+<p>Introduce yourself to the person next to you and <em>work together</em> for this exercise</p>
+<div class="figure">
+<img src="img/say_hi.gif" />
+
+</div>
+</div>
+</div>
+<div id="exercise-1---population-choropleth-1" class="slide section level1">
+<h1>Exercise 1 - Population Choropleth</h1>
+<p><strong>Choropleth Map</strong> - a map where areas are shaded or patterned in proportion to a statistical variable being displayed on the map (<a href="http://en.wikipedia.org/wiki/Choropleth_map">en.wikipedia.org/wiki/Choropleth_map</a>)</p>
+</div>
+<div id="exercise-1---population-choropleth-2" class="slide section level1">
+<h1>Exercise 1 - Population Choropleth</h1>
 <ol style="list-style-type: decimal">
 <li><p>Download <a href="http://acdmy.org/d/counties.zip">Map Academy's Counties Shapefile</a>: <a href="http://acdmy.org/d/counties.zip">acdmy.org/d/counties.zip</a></p></li>
-<li><p>Drag the downloaded <code>.zip</code> file into your CartoDB Dashboard</p></li>
-<li><p>Use the Wizard to make a Choropleth Map based on population. <strong>Hint: Use <code>pop_sqkm</code></strong></p></li>
-<li><p>Visualize and Publish your map once again.</p></li>
+<li><p>Import the downloaded <code>counties.zip</code> file into your CartoDB Dashboard</p></li>
+<li><p>Use the Wizard to make a Choropleth Map based on population. <em>Hint: Use <code>pop_sqkm</code></em></p></li>
 </ol>
-</div>
 </div>
 <div class="slide section level1">
 
@@ -75,39 +175,34 @@
 <img src="img/population-choropleth.png" />
 </div>
 </div>
-<div id="exercise-3---explore-earthquakes-data" class="slide section level1">
-<h1>Exercise 3 - Explore Earthquakes Data</h1>
+<div id="exercise-2---explore-earthquakes-data" class="slide section level1">
+<h1>Exercise 2 - Explore Earthquakes Data</h1>
+<div class="incremental">
 <ol style="list-style-type: decimal">
-<li><p>Download <a href="http://earthquake.usgs.gov/earthquakes/feed/v1.0/csv.php">All Earthquakes for the Last 30 Days</a> from USGS: <a href="http://goo.gl/hhoAyK">goo.gl/hhoAyK</a></p></li>
-<li><p>Import the <code>.csv</code> into your CartoDB account (drag and drop)</p></li>
+<li>Download <a href="http://earthquake.usgs.gov/earthquakes/feed/v1.0/csv.php">All Earthquakes for the Last 30 Days</a> from USGS: <a href="http://goo.gl/hhoAyK">goo.gl/hhoAyK</a></li>
+</ol>
+<div class="figure">
+<img src="img/earthquakes_dl.png" />
+
+</div>
+<ol start="2" style="list-style-type: decimal">
+<li><p>Import the <code>all_month.csv</code> into your CartoDB account (drag and drop)</p></li>
 <li><p>Experiment with the Wizard tab. Try Heat Map, Intensity, Density, maybe even Torque.</p></li>
 </ol>
+<p>Example: <a href="http://cdb.io/1JUy0WP">cdb.io/1JUy0WP</a></p>
 </div>
-<div id="exercise-4" class="slide section level1">
-<h1>Exercise 4</h1>
-<p>If time, try finding your own data or using the CartoDB Data Library</p>
+</div>
+<div id="good-job" class="slide section level1">
+<h1>Good Job!</h1>
+<div class="incremental">
+<p>Thanks to all of you for coming!</p>
 <div class="figure">
-<img src="img/data_library.png" />
+<img src="img/hooray.gif" />
 
 </div>
-<p>Or check out the CartoDB Map Academy: <a href="http://academy.cartodb.com/">academy.cartodb.com</a></p>
+<p>Thanks to <a href="https://objectrocket.com/">ObjectRocket</a> for hosting and <a href="http://cartodb.com">CartoDB</a> for the pizza!</p>
+<p>Learn more about CartoDB at the <a href="http://academy.cartodb.com/">CartoDB Map Academy</a></p>
 </div>
-<div id="local-geo-groups" class="slide section level1">
-<h1>Local Geo Groups</h1>
-<p>Austin Open Source GIS User Group</p>
-<p><a href="http://www.meetup.com/atx-osg">meetup.com/atx-osg</a></p>
-<div class="figure">
-<img src="img/maptimeatx.png" />
-
-</div>
-<p><a href="http://www.meetup.com/MaptimeATX">meetup.com/MaptimeATX</a></p>
-</div>
-<div id="credits" class="slide section level1">
-<h1>Credits</h1>
-<ul>
-<li><p><a href="http://maptime.io/anatomy-of-a-web-map/">Maptime Anatomy of a Web Map</a></p></li>
-<li><p><a href="http://academy.cartodb.com/">CartoDB Map Academy</a></p></li>
-</ul>
 </div>
 <script src="scripts/main.js"></script>
 </body>
