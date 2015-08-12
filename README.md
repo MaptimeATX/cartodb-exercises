@@ -1,6 +1,10 @@
 # cartodb-exercises
 
-http://maptimeatx.github.io/cartodb-exercises/
+Companion exercises for our Intro to CartoDB Maptime.
+
+First check out http://maptime.io/cartodb-tutorial/ to learn about CartoDB.
+
+Then visit http://maptimeatx.github.io/cartodb-exercises/ for the exercises.
 
 ## Building the Presentation
 
