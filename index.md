@@ -96,7 +96,7 @@ Add the following rule to add labels to your city dots:
 }
 ```
 
-(Visit [goo.gl/pucZEJ](http://goo.gl/pucZEJ) to copy-paste)
+(Visit [goo.gl/zGqpGA](https://goo.gl/zGqpGA) to copy-paste)
 
 # Tutorial - World Cities Map
 
