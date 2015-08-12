@@ -116,7 +116,7 @@ Now that we have labels, let's change the basemap to one without its own labels
 
 Click Visualize, then Publish to get a shareable link to your map
 
-![](img/populated_places_final.png)
+![Nice job!](img/populated_places_final.png)
 
 # Exercise 1 - Population Choropleth
 
