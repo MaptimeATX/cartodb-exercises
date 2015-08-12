@@ -4,6 +4,12 @@
 
 -------------------------------------------------
 
+# CartoDB Exercises
+
+Presentation viewable at [maptimeatx.github.io/cartodb-exercises/](http://maptimeatx.github.io/cartodb-exercises/)
+
+Source code for the presentation is at [github.com/MaptimeATX/cartodb-exercises](https://github.com/MaptimeATX/cartodb-exercises)
+
 # CartoDB
 
 First, check out [maptime.io/cartodb-tutorial/](http://maptime.io/cartodb-tutorial/)
